@@ -13,5 +13,8 @@ use Symfony\Component\OptionsResolver\OptionsResolver;
 
 class ContactFormType extends AbstractType
 {
-    
+    public function buildform(FormBuilderInterface $builder, array $options): void
+    {
+
+    }
 }
