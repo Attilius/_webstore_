@@ -22,4 +22,11 @@ class ContactFormType extends AbstractType
             ->add('submit', SubmitType::class, ['label' => 'Send','attr' => ['class' => 'btn-success']])
         ;
     }
+
+    public function configureOptions(OptionsResolver $resolver): void
+    {
+        $resolver->setDefaults([
+            'data_class' => Contact::class,
+        ]);
+    }
 }
