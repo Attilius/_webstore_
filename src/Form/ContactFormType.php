@@ -15,6 +15,11 @@ class ContactFormType extends AbstractType
 {
     public function buildform(FormBuilderInterface $builder, array $options): void
     {
-
+        $builder
+            ->add('name', TextType::class, ['label' => 'Name','required' => false])
+            ->add('email', EmailType::class, ['label' => 'E-mail címed','required' => false])
+            ->add('message', TextareaType::class, ['label' => 'Message','required' => false])
+            ->add('submit', SubmitType::class, ['label' => 'Send','attr' => ['class' => 'btn-success']])
+        ;
     }
 }
